@@ -11,7 +11,7 @@ module.exports = {
     },
     output:{
         path:path.join(__dirname,'dist'),
-        publicPath: "/Capella/dist/",
+        publicPath: "dist/",
         filename:'js/[name].js'
     },
     module:{
