@@ -4,7 +4,7 @@
 * 发送接口（待开发）
 */
 export var async = {
-    sendXHR:(option)=>{
+    requsetXHR:(option)=>{
         let httpRequest = false;
         //判断ie与非ie实例化XHR对象
         if(window.XMLHttpRequest){
@@ -43,6 +43,10 @@ export var async = {
         }
 
         httpRequest.open(option.method,option.url);
-        httpRequest.send(null);
+        if(typeof option.data === 'object'){
+            httpRequest.send(JSON.stringify(option.data));
+        }else{
+            httpRequest.send(null);
+        }
     }
 }
