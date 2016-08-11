@@ -1,11 +1,15 @@
-define(['./search.js'],function(search){
-console.log(search)
-$.ajax({
-    url:'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202151330&format=json'
-}).done(function(rep){
-    console.log(rep)
-})
-var listme = () => {
-        let xxax= 1
-    };
+define(['lodash'],function(_){
+//import * from 'jQuery';
+    //require("../css/normalize.css");
+    //var searchArg = require('./search.js');
+    //var showme = $('#showme');
+    //showme = _.toLower(showme)
+    //console.log(showme.show)
+    //console.log(_.toLower('AAAAAA'))
+    var a =2;
+    var showa = ()=>{
+        console.log(this.a)
+        var a =3;
+    }
+    showa();
 })

@@ -1,5 +1,5 @@
 var searchArg = function(){
-    var arg = window.location.search.split('&');
+    var arg = decodeURI(window.location.search).split('&');
     return arg;
 }
-module.exports = searchArg;
+export {searchArg};
