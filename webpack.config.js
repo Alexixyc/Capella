@@ -11,7 +11,7 @@ module.exports = {
     },
     entry:{
         index:'./src/js/index.js',
-        list:'./src/js/list.js'
+        // list:'./src/js/list.js'
     },
     output:{
         path:path.join(__dirname,'dist'),
@@ -21,7 +21,8 @@ module.exports = {
     module:{
         loaders:[
             //{test:/\.css$/,loader:'style!css'},
-            {test:/\.js$/,exclude:'/node_modules/',loader:'babel-loader'}
+            {test:/\.js$/,exclude:'/node_modules/',loader:'babel-loader'},
+            {test:/\.jsx$/,exclude:'/node_modules/',loader:'babel-preset-react'},
         ]
     },
     plugins:[
