@@ -76,6 +76,11 @@ async.requsetXHR({
     url:'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202151330&format=json',
     data:{
         name:'ssss'
+    },
+    beforeInit:()=>{
+        alert(1);
+    },
+    response(res){
+        console.log(res);
     }
 })
-console.log(async);

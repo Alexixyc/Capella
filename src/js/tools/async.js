@@ -32,13 +32,20 @@ export var async = {
             // 4 (完成)
             if(httpRequest.readyState === 4){
                 if(httpRequest.status === 200){
-                    console.log(httpRequest.responseText);
+                    option.response=(res)=>{
+                        res = httpRequest.responseText;
+                        return res;
+                    }   
                 }else{
                     //一些状态码比如400参数错误 可自行判断
                     console.log(httpRequest.status);
                 }
+            }else if(httpRequest.readyState === 0){
+                option.beforeInit=()=>{
+                    
+                }
             }else{
-                console.log('readyState状态：'+httpRequest.readyState)
+                console.log('readyState状态：'+httpRequest.readyState);
             }
         }
 
