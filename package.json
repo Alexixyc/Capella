@@ -1,36 +1,19 @@
 {
-  "name": "capella",
+  "name": "dev-ev",
   "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
-  "dependencies": {
-    "jquery": "^1.12.4"
-  },
-  "devDependencies": {
-    "babel-core": "^6.11.4",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.11.1",
-    "css-loader": "^0.23.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "html-webpack-plugin": "^2.22.0",
-    "react-hot-loader": "^1.3.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
-  },
+  "description": "development environment based on frontend newest version tools like(vue2 webpack2)",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "dev": "webpack-dev-server --inline --hot --quiet --host 0.0.0.0",
+    "build": "webpack --progress --hide-modules --config webpack.production.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/slimeball/Capella.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/slimeball/Capella/issues"
-  },
-  "homepage": "https://github.com/slimeball/Capella#readme"
+  "author": "slimeball",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  }
 }
