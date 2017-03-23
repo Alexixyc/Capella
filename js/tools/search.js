@@ -1,5 +1,9 @@
-var searchArg = function(){
-    var arg = decodeURI(window.location.search).split('&');
-    return arg;
+/**
+ * 获取本域名search参数并返回
+ */
+export default {
+    searchArg() {
+        var arg = decodeURI(window.location.search).split('&');
+        return arg;
+    }
 }
-export {searchArg};

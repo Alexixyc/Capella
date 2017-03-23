@@ -1,15 +1,19 @@
-export var selector = {
-    gtcls:(className)=>{
+/**
+ * 选择器类
+ */
+export default {
+    //class名
+    gtcls(className) {
         let cls = '';
-        if(document.querySelectorAll){
+        if (document.querySelectorAll) {
             cls = document.querySelectorAll(className).length;
             // for(var i=0,len=cls.length;i<len;i++){
             //     cls[i];
             // }
-        }else if(document.getElementsByName){
+        } else if (document.getElementsByName) {
             document.getElementsByClassName(className);
-        }else{
-            
+        } else {
+
         }
     }
 }
