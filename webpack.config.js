@@ -3,13 +3,13 @@ const path = require('path');
 
 module.exports = {
 
-  entry: "./src/main.js",
+  entry: "./js/index.js",
   devServer: {
-    port: 3000
+    port: 4000
   },
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: "bundle.js",
+    filename: "capella.js",
     publicPath: "/build/"
   },
   module: {

@@ -69,7 +69,7 @@
 // console.log(_excstr.toArray(astr));
 // console.log(_excstr.delSpace(astr))
 //console.log(urlarg)
-import * as asyncPage from './async';
+import * as asyncPage from './tools/async';
 var async = asyncPage.async;
 async.requsetXHR({
     method:'post',
