@@ -1,5 +1,5 @@
 # Capella
-> 练习性质的工具类  
+> 工具类
 > js/tools为通用工具类  
 > nodejModule为nodejs工具类  
 ### js/tools目录  
