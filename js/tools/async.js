@@ -30,23 +30,47 @@ export default {
             // 2 (装载完毕)
             // 3 (交互中)
             // 4 (完成)
-            if (httpRequest.readyState === 4) {
-                if (httpRequest.status === 200) {
-                    option.response = (res) => {
-                        res = httpRequest.responseText;
-                        return res;
-                    }
-                } else {
-                    //一些状态码比如400参数错误 可自行判断
-                    console.log(httpRequest.status);
+            switch(httpRequest.readyState){
+                case 0:
+                option.beforeInit = (res) => {
+                    res = httpRequest.responseText;
+                    console.log(res);
+                    return res;
                 }
-            } else if (httpRequest.readyState === 0) {
-                option.beforeInit = () => {
-
+                break;
+                case 1:
+                break;
+                case 2:
+                break;
+                case 3:
+                break;
+                case 4:
+                option.response = (res) => {
+                    res = httpRequest.responseText;
+                    console.log(res)
+                    return res;
                 }
-            } else {
-                console.log('readyState状态：' + httpRequest.readyState);
+                break;
             }
+            // if (httpRequest.readyState === 4) {
+            //     if (httpRequest.status === 200) {
+            //         option.response = (res) => {
+            //             res = httpRequest.responseText;
+            //             return res;
+            //         }
+            //     } else {
+            //         //一些状态码比如400参数错误 可自行判断
+            //         console.log(httpRequest.status);
+            //     }
+            // } else if (httpRequest.readyState === 0) {
+            //     option.beforeInit = (res) => {
+            //         res = httpRequest.responseText;
+            //         return res;
+            //         console.log(beforeInit);
+            //     }
+            // } else {
+            //     console.log('readyState状态：' + httpRequest.readyState);
+            // }
         }
 
         httpRequest.open(option.method, option.url);

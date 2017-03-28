@@ -3,7 +3,7 @@
  */
 export default {
     searchArg() {
-        var arg = decodeURI(window.location.search).split('&');
+        let arg = decodeURI(window.location.search).split('&');
         return arg;
     }
 }
