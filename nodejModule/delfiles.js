@@ -19,7 +19,7 @@ module.exports = function (keeparr, filepath, fileext) {
             return;
         }
         data = data.map(function (x) {
-            return x.substr(0, x.length - 4)
+            return x.substr(0, x.length - fileext.length)
         })
         keeparr.forEach(function (x) {
             if (x === '+1') {
