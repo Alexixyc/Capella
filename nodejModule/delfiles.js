@@ -30,7 +30,12 @@ module.exports = function (keeparr, filepath, fileext) {
             }
         })
         data.forEach(function (x) {
-            fs.unlink(filepath + x + fileext)
+            fs.unlink(filepath + x + fileext, function (err) {
+                if (err) {
+                    throw err;
+                }
+                console.log('文件：' + x + fileext + '删除成功！');
+            })
         })
         console.log(data.length)
     })
