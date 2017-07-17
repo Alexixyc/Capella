@@ -72,7 +72,7 @@
 import asyncPage from './tools/async';
 asyncPage.requsetXHR({
     method: 'post',
-    url: 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20%3D%202151330&format=json',
+    url: 'http://10.100.148.138:8080/test',
     data: {
         name: 'ssss'
     },
@@ -83,3 +83,4 @@ asyncPage.requsetXHR({
         console.log(res);
     }
 })
+
